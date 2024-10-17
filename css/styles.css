@@ -1,25 +1,23 @@
-
 /* Importing Roboto font with different weights for use across the website */
 @font-face {
-    font-family: 'Roboto'; /* Defining font family name as 'Roboto' */
-    src: url('../fonts/Roboto-Bold.ttf') format('truetype'); /* Source file for the font */
-    font-weight: 900; /* Font weight is set to black (very bold) */
-    font-style: blod; /* Font style set to normal */
+    font-family: 'RobotoBI'; /* Defining font family name as 'Roboto' */
+    src: url('../fonts/Roboto-BoldItalic.ttf') format('truetype'); /* Source file for the font */
+    font-weight: bold; /* Font weight set to bold */
 }
 
 @font-face {
-    font-family: 'Roboto'; /* Defining font family name as 'Roboto' */
-    src: url('../font/lightitalic') format('truetype'); /* Source file for the font */
-    font-weight: 700; /* Font weight set to bold */
-    font-style: normal; /* Font style set to normal */
+    font-family: 'RobotoMI'; /* Defining font family name as 'Roboto' */
+    src: url('../fonts/Roboto-MediumItalic.ttf') format('truetype'); /* Source file for the font */
+    font-weight: normal; /* Font weight set to medium */
 }
+
 /* Styling for the entire body of the webpage */
 body {
     font-family: 'Roboto', sans-serif; /* Applying the imported Roboto font to all text */
     margin: 0; /* Removing default browser margin for a cleaner layout */
     padding: 0; /* Removing default browser padding */
     line-height: 1.6; /* Setting line height for improved readability */
-    background-color: #f5f5f5; /* Light gray background to contrast with text */
+    background-color: #98aab9; /* Light gray background to contrast with text */
     color: #333; /* Dark gray base color for content text */
 }
 
@@ -40,15 +38,15 @@ header {
 .navigation a {
     text-decoration: none; /* Removing underline from all links */
     padding: 10px 20px; /* Adding padding to increase clickable area of links */
-    font-weight: 700; /* Using bold weight for better visibility */
+    font-weight: bolder; /* Using bold weight for better visibility */
     color: #ffffff; /* White text for better contrast against the blue header background */
     transition: color 0.3s, background-color 0.3s, transform 0.2s; /* Adding smooth transitions for color, background, and scaling */
-    border-radius: 5px; /* Rounding corners for a modern appearance */
+    border-radius: 6px; /* Rounding corners for a modern appearance */
 }
 
 /* Hover effect for navigation links */
 .navigation a:hover {
-    background-color: #3b6d99; /* Darker blue to create contrast when the link is hovered */
+    background-color: #3c4c6e; /* Darker blue to create contrast when the link is hovered */
     transform: scale(1.05); /* Slight scaling to give visual feedback during hover */
     color: #ffffff; /* Maintaining white text color for readability */
 }
@@ -61,18 +59,18 @@ header {
 
 /* Styling for the logo image */
 .logoimage {
-    width: 300px; /* Setting a fixed width for the logo */
+    width: 800px; /* Setting a fixed width for the logo */
     height: auto; /* Maintaining aspect ratio to prevent distortion */
     display: block; /* Ensuring the logo is treated as a block element for easy centering */
     margin: 0 auto; /* Centering the logo horizontally */
-    padding: 15px; /* Adding padding for visual spacing */
+    padding: 5px; /* Adding padding for visual spacing */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow to create focus on the logo */
 }
 
 /* Styling for each section of the page */
 section {
     padding: 50px 20px; /* Adding padding inside the sections for better spacing */
-    background-color: #ffffff; /* Using a white background to make content visually distinct */
+    background-color: #9ab4ca; /* Using a white background to make content visually distinct */
     margin: 20px auto; /* Adding vertical spacing to separate sections */
     max-width: 900px; /* Setting a max-width to improve readability */
     border-radius: 8px; /* Rounding corners to create a modern aesthetic */
@@ -81,16 +79,63 @@ section {
 
 /* Styling for section headings (h1, h2) */
 section h1, section h2 {
-    color: #2c3e50; /* Dark blue color for headings to provide good contrast */
-    font-weight: normal; /* Using bold weight for emphasis */
-    margin-bottom: 15px; /* Adding space below headings to visually separate them from content */
-}
+    color: #000000; /* Dark blue color for headings to provide good contrast */
+    margin-bottom: 8px; /* Adding space below headings to visually separate them from content */
+    text-align: center; /* Centering headings */
+    font-family: 'RobotoBI'; /* Using bold italic Roboto font for headings */
+    font-size: 2rem; /* Setting a consistent font size for readability */
+ }
 
 /* General paragraph styling in sections */
 section p {
-    font-size: 1rem; /* Setting a consistent font size for readability */
-    color: #555; /* Slightly darker text color for better readability */
+    color: #272424; /* Slightly darker text color for better readability */
     margin-bottom: 20px; /* Adding space below paragraphs to visually separate them */
+    text-align: center; /* Centering paragraphs */
+    font-family: 'RobotoMI'; /* Using medium italic Roboto font for body text */
+ }
+
+/* Grid layout for the post container on page 2 */
+#post-container {
+    display: grid; /* Setting the post container to use grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid with flexible columns */
+    grid-gap: 20px; /* Adding space between grid items */
+    padding: 20px; /* Padding inside the container */
+    background-color: #9ab4ca; /* Light gray background */
+    border-radius: 8px; /* Rounded corners for a smooth look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px auto; /* Center the container and add space around */
+    max-width: 900px; /* Constrain width for better readability */
+}
+
+/* Styling for each individual post */
+.post {
+    background-color: #c2c8ce; /* White background for each post */
+    padding: 20px; /* Adding padding inside each post */
+    border-radius: 5px; /* Rounded corners for posts */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow for separation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+/* Hover effect for posts */
+.post:hover {
+    transform: translateY(-5px); /* Move the post up slightly for visual feedback */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Darker shadow on hover */
+}
+
+/* Styling for post title */
+.post h3 {
+    color: #05284b; /* Dark blue color for post titles */
+     margin-bottom: 10px; /* Space below title */
+    font-family: 'RobotoBI'; /* Using medium italic Roboto font for h3 text */
+    text-align: center; /* Centering paragraphs */
+}
+
+/* Styling for post content */
+.post p {
+    font-size: 1rem; /* Base font size for post content */
+    color: #0c0707; /* Slightly darker text color */
+    line-height: 1.6; /* Improve readability with better line spacing */
+    text-align: center; /* Centering paragraphs */
 }
 
 /* Footer styling */
@@ -103,8 +148,43 @@ footer {
     border-top: 4px solid #2c3e50; /* Adding a top border for visual separation */
 }
 
-/* Utility Classes */
+/* Styling for the weather container */
+#weather-container {
+    display: grid; /* Use grid layout to organize weather data */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid with flexible columns */
+    gap: 10px; /* Space between weather items */
+    padding: 10px; /* Padding inside the container */
+}
 
+/* Styling for each weather block (for cities) */
+.weather {
+    background-color: #cee8ff; /* White background for each weather block */
+    padding: 20px; /* Padding inside the weather block */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow for better visibility */
+    text-align: center; /* Center the text horizontally */
+    display: flex; /* Use flexbox for vertical centering */
+    flex-direction: column; /* Stack items vertically (city name and weather data) */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+/* Styling for the city name (h3) */
+.weather h3 {
+    font-size: 1.5rem; /* Increase font size for city name */
+    color: #000000; /* Dark blue for city names */
+    margin-bottom: 10px; /* Space below city name */
+    font-family: 'RobotoBI';
+}
+
+/* Styling for the weather data (temperature, etc.) */
+.weather p {
+    font-size: 1rem; /* Base font size for weather information */
+    color: #181616; /* Slightly darker text color for better readability */
+    font-family: 'RobotoMI';
+ }
+
+ 
 /* General button styles for the website */
 .button {
     display: inline-block; /* Ensuring the button respects block level attributes */
